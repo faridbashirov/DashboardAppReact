@@ -1,5 +1,5 @@
 import { Component } from "react";
-import ReactQuill from "react-quill";
+// import ReactQuill from "react-quill";
 export const multiselectdata = [
   { value: "Angelina May", label: "Angelina May" },
   { value: "Kiara advain", label: "Kiara advain" },

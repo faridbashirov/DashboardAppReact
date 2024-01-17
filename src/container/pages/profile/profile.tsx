@@ -4,7 +4,7 @@ import Pageheader from '../../../components/pageheader/pageheader';
 import { Link } from 'react-router-dom';
 // import { Scrollbar } from 'react-scrollbars-custom';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import { Followersdata, Friendsdata, Gallerydata, Personalinfodata, RecentPostsdata, Skillsdata, Suggestionsdata } from './profiledata';
+import { Friendsdata, Gallerydata, Personalinfodata} from './profiledata';
 import media17 from "../../../assets/images/media/media-17.jpg";
 import media75 from "../../../assets/images/media/media-75.jpg";
 import media18 from "../../../assets/images/media/media-18.jpg";

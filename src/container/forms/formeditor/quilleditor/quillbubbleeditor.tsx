@@ -1,5 +1,5 @@
 import { Component } from "react";
-import ReactQuill from "react-quill";
+// import ReactQuill from "react-quill";
 // import 'react-quill/dist/quill.bubble.css'; // Import Quill Bubble theme styles
 
 interface EditorProps {

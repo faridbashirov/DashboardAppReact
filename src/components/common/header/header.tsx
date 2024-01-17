@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from 'react';
-import { Badge, Button, ButtonGroup, Dropdown, Form, ListGroup, Modal, Row } from 'react-bootstrap';
+import {Button, ButtonGroup, Dropdown, Form, ListGroup, Modal, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { MENUITEMS } from '../sidebar/sidemenu/sidemenu';
 import { connect } from "react-redux";
@@ -16,11 +16,11 @@ import french from "../../../assets/images/flags/french_flag.jpg";
 import germany from "../../../assets/images/flags/germany_flag.jpg";
 import italy from "../../../assets/images/flags/italy_flag.jpg";
 import russia from "../../../assets/images/flags/russia_flag.jpg";
-import product1 from "../../../assets/images/ecommerce/jpg/1.jpg";
-import product3 from "../../../assets/images/ecommerce/jpg/3.jpg";
-import product5 from "../../../assets/images/ecommerce/jpg/5.jpg";
-import product4 from "../../../assets/images/ecommerce/jpg/4.jpg";
-import product6 from "../../../assets/images/ecommerce/jpg/6.jpg";
+// import product1 from "../../../assets/images/ecommerce/jpg/1.jpg";
+// import product3 from "../../../assets/images/ecommerce/jpg/3.jpg";
+// import product5 from "../../../assets/images/ecommerce/jpg/5.jpg";
+// import product4 from "../../../assets/images/ecommerce/jpg/4.jpg";
+// import product6 from "../../../assets/images/ecommerce/jpg/6.jpg";
 import face9 from "../../../assets/images/faces/9.jpg";
 import figma from "../../../assets/images/apps/figma.png";
 import powerpoint from "../../../assets/images/apps/microsoft-powerpoint.png";
@@ -324,61 +324,61 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
             }
         }
     };
-    const cartProduct = [
-        {
-            id: 1,
-            src: product1,
-            name: 'SomeThing Phone',
-            price: '$1,299.00',
-            color: 'Metallic Blue',
-            text: '6gb Ram',
-            class: ''
-        },
-        {
-            id: 2,
-            src: product3,
-            name: 'Stop Watch',
-            price: '$179.29',
-            color: 'Analog',
-            text: 'Free shipping',
-            class: 'badge bg-pink-transparent fs-10',
-        },
-        {
-            id: 3,
-            src: product5,
-            name: 'Photo Frame',
-            price: '$29.00',
-            color: 'Decorative',
-            text: '',
-            class: '',
-        },
-        {
-            id: 4,
-            src: product4,
-            name: 'Kikon Camera',
-            price: '$4,999.00',
-            color: 'Black',
-            text: '50MM',
-            class: '',
-        },
-        {
-            id: 5,
-            src: product6,
-            name: 'Canvas Shoes',
-            price: '$129.00',
-            color: 'Gray',
-            text: 'Sports',
-            class: ''
-        },
-    ];
-    const [cartItems, setCartItems] = useState([...cartProduct]);
-    const [cartItemCount, setCartItemCount] = useState(cartProduct.length);
+    // const cartProduct = [
+    //     {
+    //         id: 1,
+    //         src: product1,
+    //         name: 'SomeThing Phone',
+    //         price: '$1,299.00',
+    //         color: 'Metallic Blue',
+    //         text: '6gb Ram',
+    //         class: ''
+    //     },
+    //     {
+    //         id: 2,
+    //         src: product3,
+    //         name: 'Stop Watch',
+    //         price: '$179.29',
+    //         color: 'Analog',
+    //         text: 'Free shipping',
+    //         class: 'badge bg-pink-transparent fs-10',
+    //     },
+    //     {
+    //         id: 3,
+    //         src: product5,
+    //         name: 'Photo Frame',
+    //         price: '$29.00',
+    //         color: 'Decorative',
+    //         text: '',
+    //         class: '',
+    //     },
+    //     {
+    //         id: 4,
+    //         src: product4,
+    //         name: 'Kikon Camera',
+    //         price: '$4,999.00',
+    //         color: 'Black',
+    //         text: '50MM',
+    //         class: '',
+    //     },
+    //     {
+    //         id: 5,
+    //         src: product6,
+    //         name: 'Canvas Shoes',
+    //         price: '$129.00',
+    //         color: 'Gray',
+    //         text: 'Sports',
+    //         class: ''
+    //     },
+    // ];
+    // const [cartItems, setCartItems] = useState([...cartProduct]);
+    // // const [cartItemCount, setCartItemCount] = useState(cartProduct.length);
 
-    const handleRemove = (itemId:any) => {
-        const updatedCart = cartItems.filter((item) => item.id !== itemId);
-        setCartItems(updatedCart);
-        setCartItemCount(updatedCart.length);
-    };
+    // const handleRemove = (itemId:any) => {
+    //     const updatedCart = cartItems.filter((item) => item.id !== itemId);
+    //     setCartItems(updatedCart);
+    //     // setCartItemCount(updatedCart.length);
+    // };
     const initialNotifications = [
         { id: 1, avatarColor: 'primary', icon: 'ti-gift', text1: 'Your Order Has Been Shipped', text2: 'Order No: 123456 Has Shipped To YourDelivery Address', class: '', class1: '' },
         { id: 2, avatarColor: 'secondary', icon: 'ti-discount-2', text1: 'Discount Available', text2: 'Discount Available On Selected Products', class: '', class1: '' },

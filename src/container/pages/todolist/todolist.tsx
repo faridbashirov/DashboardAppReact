@@ -17,7 +17,7 @@ import face14 from "../../../assets/images/faces/14.jpg";
 import face15 from "../../../assets/images/faces/15.jpg";
 import face16 from "../../../assets/images/faces/16.jpg";
 import face21 from "../../../assets/images/faces/21.jpg";
-import media66 from "../../../assets/images/media/media-66.png";
+// import media66 from "../../../assets/images/media/media-66.png";
 import Select from 'react-select';
 import { MultiSelect } from 'react-multi-select-component';
 import DatePicker from "react-datepicker";
