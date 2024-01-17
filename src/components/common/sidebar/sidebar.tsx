@@ -201,67 +201,69 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
   function setSidemenu(list?: any) {
 
     let dd = list ? list.path + '/' : location.pathname;
-    if (menuitems) {
-      menuitems.filter((mainlevel: any) => {
-        if (mainlevel.Items) {
-          mainlevel.Items.filter((items: any) => {
+    // if (menuitems) {
+    //   menuitems.filter((mainlevel: any) => {
+    //     if (mainlevel.Items) {
+    //       mainlevel.Items.filter((items: any) => {
             
-            if (ulRef.current.href != document.location['href'] || localStorage.ynexverticalstyles != 'doublemenu') {
-              items.active = false;
-            }
-            items.selected = false;
+    //         if (ulRef.current.href != document.location['href'] || localStorage.ynexverticalstyles != 'doublemenu') {
+    //           items.active = false;
+    //         }
+    //         items.selected = false;
 
-            if (dd === '/test/ynex-ts/preview') {
-              dd = '/dashboards/crm/';
-            }
-            if (dd === items.path + '/') {
-              items.active = true;
-              items.selected = true;
-            }
-            if (items.children) {
-              items.children.filter((submenu: any) => {
-                submenu.active = false;
-                submenu.selected = false;
-                if (dd === submenu.path + '/') {
-                  const theme = store.getState();
-                  items.active = theme.dataNavLayout == 'horizontal' || theme.dataNavStyle == 'icon-hover' ? false : true;
-                  items.selected = true;
-                  submenu.active = true;
-                  submenu.selected = true;
-                }
-                if (submenu.path === "#") {
-                  submenu.active = false;
-                  submenu.selected = false;
-                }
-                if (submenu.children) {
-                  submenu.children.filter((submenu1: any) => {
-                    submenu1.active = false;
-                    submenu1.selected = false;
-                    if (dd === submenu1.path + '/') {
-                      items.active = true;
-                      items.selected = true;
-                      submenu.active = true;
-                      submenu.selected = true;
-                      submenu1.active = true;
-                      submenu1.selected = true;
-                    }
-                    if (submenu1.path === "#") {
-                      submenu1.active = false;
-                      submenu1.selected = false;
-                    }
-                    return submenu1;
-                  });
-                }
-                return submenu;
-              });
-            }
-            return items;
-          });
-        }
-        setMenuitems((arr: any) => [...arr]);
-        return mainlevel;
-      });
-    }
+    //         if (dd === '/test/ynex-ts/preview') {
+    //           dd = '/dashboards/crm/';
+    //         }
+    //         if (dd === items.path + '/') {
+
+              
+    //           items.active = true;
+    //           items.selected = true;
+    //         }
+    //         if (items.children) {
+    //           items.children.filter((submenu: any) => {
+    //             submenu.active = false;
+    //             submenu.selected = false;
+    //             if (dd === submenu.path + '/') {
+    //               const theme = store.getState();
+    //               items.active = theme.dataNavLayout == 'horizontal' || theme.dataNavStyle == 'icon-hover' ? false : true;
+    //               items.selected = true;
+    //               submenu.active = true;
+    //               submenu.selected = true;
+    //             }
+    //             if (submenu.path === "#") {
+    //               submenu.active = false;
+    //               submenu.selected = false;
+    //             }
+    //             if (submenu.children) {
+    //               submenu.children.filter((submenu1: any) => {
+    //                 submenu1.active = false;
+    //                 submenu1.selected = false;
+    //                 if (dd === submenu1.path + '/') {
+    //                   items.active = true;
+    //                   items.selected = true;
+    //                   submenu.active = true;
+    //                   submenu.selected = true;
+    //                   submenu1.active = true;
+    //                   submenu1.selected = true;
+    //                 }
+    //                 if (submenu1.path === "#") {
+    //                   submenu1.active = false;
+    //                   submenu1.selected = false;
+    //                 }
+    //                 return submenu1;
+    //               });
+    //             }
+    //             return submenu;
+    //           });
+    //         }
+    //         return items;
+    //       });
+    //     }
+    //     setMenuitems((arr: any) => [...arr]);
+    //     return mainlevel;
+    //   });
+    // }
 
     if (localStorage.getItem("ynexverticalstyles") == "icontext") {
       // ThemeChanger({...local_varaiable,"iconText":"open"})
@@ -632,6 +634,7 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
                   </Fragment>
 
                 ))}
+
               </ul>
 
               <div className="slide-right" id="slide-right"><svg onClick={() => { slideRight(); }} xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path> </svg></div>
