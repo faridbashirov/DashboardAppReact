@@ -26,7 +26,7 @@ const Login: FC<LoginProps> = ({ ThemeChanger }: any) => {
     };
     const navigate = useNavigate();
     const routeChange = () => {
-        const path = `${import.meta.env.BASE_URL}dashboards/crm/`;
+        const path = `${import.meta.env.BASE_URL}home`;
         navigate(path);
     };
 

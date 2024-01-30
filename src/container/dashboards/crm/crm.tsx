@@ -30,7 +30,7 @@ const Crm: FC<CrmProps> = () => {
     };
     return (
         <Fragment>
-{/* 
+
             <div className="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
                 <div>
                     <p className="fw-semibold fs-18 mb-0">Welcome back, Json Taylor !</p>
@@ -712,7 +712,7 @@ const Crm: FC<CrmProps> = () => {
                         </Col>
                     </Row>
                 </Col>
-            </Row> */}
+            </Row>
         </Fragment>
     );
 };

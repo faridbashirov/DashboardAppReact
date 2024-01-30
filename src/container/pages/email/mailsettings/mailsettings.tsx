@@ -103,7 +103,7 @@ const Mailsettings: FC<MailsettingsProps> = () => {
                                                 <Col xl={12}>
                                                     <Form.Label className="">User Name</Form.Label>
                                                     <InputGroup className="input-group mb-3">
-                                                        <InputGroup.Text className="" id="basic-addon3">user2413@gmail.com</InputGroup.Text>
+                                                        {/* <InputGroup.Text className="" id="basic-addon3">user2413@gmail.com</InputGroup.Text> */}
                                                         <Form.Control type="text" className="" id="basic-url" aria-describedby="basic-addon3"/>
                                                     </InputGroup>
                                                 </Col>  

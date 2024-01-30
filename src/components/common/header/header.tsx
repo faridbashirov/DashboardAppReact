@@ -742,9 +742,9 @@ const Header = ({ local_varaiable, ThemeChanger }: any) => {
                     <div className="mt-4">
                         <p className="font-weight-semibold text-muted mb-2">Are You Looking For...</p>
                         <span className="search-tags"><i className="fe fe-user me-2"></i>People<Link to="#" className="tag-addon"><i className="fe fe-x"></i></Link></span>
-                        <span className="search-tags"><i className="fe fe-file-text me-2"></i>Pages<Link to="#" className="tag-addon"><i className="fe fe-x"></i></Link></span>
-                        <span className="search-tags"><i className="fe fe-align-left me-2"></i>Articles<Link to="#" className="tag-addon"><i className="fe fe-x"></i></Link></span>
-                        <span className="search-tags"><i className="fe fe-server me-2"></i>Tags<Link to="#" className="tag-addon"><i className="fe fe-x"></i></Link></span>
+                        <span className="search-tags"><i className="fe fe-file-text me-2"></i>Task<Link to="#" className="tag-addon"><i className="fe fe-x"></i></Link></span>
+                        <span className="search-tags"><i className="fe fe-align-left me-2"></i>Customer<Link to="#" className="tag-addon"><i className="fe fe-x"></i></Link></span>
+                      
                     </div>
                     <div className="my-4">
                         <p className="font-weight-semibold text-muted mb-2">Recent Search :</p>

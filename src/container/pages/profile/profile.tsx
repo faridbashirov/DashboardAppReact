@@ -46,16 +46,16 @@ const Profile: FC<ProfileProps> = () => {
                                     </span>
                                 </div>
                                 <div className="flex-fill main-profile-info">
-                                    <div className="d-flex align-items-center justify-content-between">
+                                    {/* <div className="d-flex align-items-center justify-content-between">
                                         <h6 className="fw-semibold mb-1 text-fixed-white">Json Taylor</h6>
                                         <Button variant='' className="btn btn-light btn-wave"><i className="ri-add-line me-1 align-middle d-inline-block"></i>Follow</Button>
-                                    </div>
+                                    </div> */}
                                     <p className="mb-1 text-muted text-fixed-white op-7">Chief Executive Officer (C.E.O)</p>
-                                    <p className="fs-12 text-fixed-white mb-4 op-5">
+                                    <p className="fs-12 text-fixed-white mb-4 op-5 mt-2">
                                         <span className="me-3"><i className="ri-building-line me-1 align-middle"></i>Georgia</span>
                                         <span><i className="ri-map-pin-line me-1 align-middle"></i>Washington D.C</span>
                                     </p>
-                                    <div className="d-flex mb-0">
+                                    {/* <div className="d-flex mb-0">
                                         <div className="me-4">
                                             <p className="fw-bold fs-20 text-fixed-white text-shadow mb-0">113</p>
                                             <p className="mb-0 fs-11 op-5 text-fixed-white">Projects</p>
@@ -67,8 +67,8 @@ const Profile: FC<ProfileProps> = () => {
                                         <div className="me-4">
                                             <p className="fw-bold fs-20 text-fixed-white text-shadow mb-0">128</p>
                                             <p className="mb-0 fs-11 op-5 text-fixed-white">Following</p>
-                                        </div>
-                                    </div>
+                                        </div> */}
+                                    {/* </div> */}
                                 </div>
                             </div>
                             <div className="p-4 border-bottom border-block-end-dashed">
@@ -741,7 +741,7 @@ const Profile: FC<ProfileProps> = () => {
                                 </Card.Body>
                             </Card>
                         </Col>
-                        <Col xl={4} className="col-xl-">
+                        <Col xl={12} className="col-xl-">
                             <Card className="custom-card">
                                 <Card.Header>
                                     <Card.Title>

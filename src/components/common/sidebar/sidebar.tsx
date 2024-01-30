@@ -1,5 +1,6 @@
 import { Fragment, useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { MENUITEMS } from './sidemenu/sidemenu';
 import logo1 from "../../../assets/images/brand-logos/desktop-logo.png";
 import logo2 from "../../../assets/images/brand-logos/toggle-logo.png";
@@ -16,6 +17,7 @@ const history: any = [];
 const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
   const location = useLocation();
   const [menuitems, setMenuitems] = useState<any>(MENUITEMS);
+  const navigate = useNavigate()
 
   useEffect(() => {
     history.push(location.pathname); // add  history to history  stack for current location.pathname to prevent multiple history calls innerWidth  and innerWidth  calls from  multiple users. This is important because the history stack is not always empty when the user clicks  the history
@@ -471,7 +473,7 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
       <aside className="app-sidebar sticky" id="sidebar" onMouseEnter={() => Onhover()}
         onMouseLeave={() => Outhover()} >
         <div className="main-sidebar-header">
-          <Link to={`${import.meta.env.BASE_URL}dashboards/crm/`} className="header-logo">
+          <Link to={`${import.meta.env.BASE_URL}home`} className="header-logo">
             <img src={logo1} alt="logo" className="desktop-logo" />
             <img src={logo2} alt="logo" className="toggle-logo" />
             <img src={logo3} alt="logo" className="desktop-dark" />
@@ -504,8 +506,8 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
                         <li className={`slide ${leveltwo.active ? "active" : ''}`}
                           key={Math.random()} >
 
-                          <Link ref={ulRef} onClick={(_event) => { setSidemenu(leveltwo); noChild(); }}
-                            to={leveltwo.path + "/"}
+                          <Link to={leveltwo?.link} ref={ulRef} onClick={(_event) => { setSidemenu(leveltwo); noChild();navigate(leveltwo?.link) }}
+                           
                             className={`side-menu__item ${leveltwo.selected ? "active" : ""}`}>{leveltwo.icon} <span className="side-menu__label">
                               {leveltwo.title}
                               {leveltwo.badgetxt ? (
@@ -520,8 +522,8 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
                         : leveltwo.type === "sub" ?
                           <li className={`slide has-sub ${leveltwo.active ? "open" : ''} ${leveltwo.selected ? "active" : ''} `}
                             key={Math.random()} onClick={(event) => { MenuOpen(event); }}>
-                            <a href="#" className={`side-menu__item ${leveltwo.selected ? "active" : ""}`}
-                              onClick={(event) => { event.preventDefault(); toggleSidemenu(leveltwo); }}>
+                            <Link to={leveltwo?.link} className={`side-menu__item ${leveltwo.selected ? "active" : ""}`}
+                              onClick={(event) => { event.preventDefault(); toggleSidemenu(leveltwo); navigate(leveltwo?.link)}}>
                               {leveltwo.icon}
                               <span className="side-menu__label">
                                 {leveltwo.title}
@@ -533,8 +535,8 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
                                   ""
                                 )}
                               </span>
-                              <i className="angle fe fe-chevron-right side-menu__angle"></i>
-                            </a>
+                              <i style={{position:"static"}} className="angle fe fe-chevron-right side-menu__angle"></i>
+                            </Link>
                             <ul ref={ulElement} className={`slide-menu child1 ${leveltwo.active ?
                               "active" : ""
                               } ${leveltwo.active && localStorage.ynexverticalstyles == 'doublemenu' ?
